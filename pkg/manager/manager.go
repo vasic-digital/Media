@@ -26,11 +26,11 @@ type Logger interface {
 
 // Result represents the output of the detection pipeline for a single file.
 type Result struct {
-	Path       string
-	Detection  *detector.Detection
-	Metadata   *analyzer.Metadata
-	Providers  []*provider.SearchResult
-	Error      error
+	Path      string
+	Detection *detector.Detection
+	Metadata  *analyzer.Metadata
+	Providers []*provider.SearchResult
+	Error     error
 }
 
 // Pipeline orchestrates the media detection, analysis, and enrichment workflow.

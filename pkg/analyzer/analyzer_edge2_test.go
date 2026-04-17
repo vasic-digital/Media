@@ -65,9 +65,9 @@ func TestFilenameAnalyzer_UnicodeFilenames(t *testing.T) {
 	a := analyzer.NewFilenameAnalyzer()
 
 	tests := []struct {
-		name      string
-		path      string
-		wantType  detector.MediaType
+		name     string
+		path     string
+		wantType detector.MediaType
 	}{
 		{
 			"japanese_movie",
