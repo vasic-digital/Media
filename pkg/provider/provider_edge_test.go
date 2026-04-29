@@ -94,6 +94,7 @@ func TestRegistry_ConcurrentRegisterAndSearch(t *testing.T) {
 // --- Concurrent Register, Get, List, and Search ---
 
 func TestRegistry_ConcurrentAllOperations(t *testing.T) {
+	// bluff-scan: no-assert-ok (concurrency test — go test -race catches data races; absence of panic == correctness)
 	r := NewRegistry()
 
 	// Pre-register a few providers (use copyingMockProvider to avoid races)
