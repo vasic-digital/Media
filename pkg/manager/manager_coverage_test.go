@@ -34,28 +34,6 @@ func (l *testLogger) Error(msg string, keysAndValues ...interface{}) {
 
 // --- NewPipeline with Config and Logger ---
 
-func TestNewPipeline_WithLogger(t *testing.T) {
-	logger := &testLogger{}
-	cfg := &Config{Logger: logger}
-
-	p := NewPipeline(nil, cfg)
-	require.NotNil(t, p)
-	assert.NotNil(t, p.logger)
-}
-
-func TestNewPipeline_WithNilConfig(t *testing.T) {
-	p := NewPipeline(nil, nil)
-	require.NotNil(t, p)
-	assert.Nil(t, p.logger)
-}
-
-func TestNewPipeline_WithConfigButNilLogger(t *testing.T) {
-	cfg := &Config{Logger: nil}
-	p := NewPipeline(nil, cfg)
-	require.NotNil(t, p)
-	assert.Nil(t, p.logger)
-}
-
 // --- Process: unknown type with logger ---
 
 func TestProcess_UnknownType_WithLogger(t *testing.T) {

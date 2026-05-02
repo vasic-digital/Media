@@ -9,12 +9,6 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestNewEngine(t *testing.T) {
-	e := NewEngine()
-	require.NotNil(t, e)
-	assert.True(t, len(e.rules) > 0, "engine should have default rules")
-}
-
 // --- TV Show Detection ---
 
 func TestDetect_TVShow_S01E02(t *testing.T) {

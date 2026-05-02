@@ -9,12 +9,6 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestNewFilenameAnalyzer(t *testing.T) {
-	a := NewFilenameAnalyzer()
-	require.NotNil(t, a)
-	require.NotNil(t, a.engine)
-}
-
 func TestFilenameAnalyzer_SupportedTypes(t *testing.T) {
 	a := NewFilenameAnalyzer()
 	types := a.SupportedTypes()

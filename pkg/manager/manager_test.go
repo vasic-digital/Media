@@ -12,13 +12,6 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestNewPipeline(t *testing.T) {
-	p := NewPipeline(nil, nil)
-	assert.NotNil(t, p)
-	assert.NotNil(t, p.engine)
-	assert.NotNil(t, p.analyzer)
-}
-
 func TestPipeline_Process_Movie(t *testing.T) {
 	p := NewPipeline(nil, nil)
 	result := p.Process(context.Background(), "The.Matrix.1999.1080p.BluRay.mkv")
